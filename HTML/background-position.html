@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background-position:</title>
+</head>
+<body>
+    <h1>Описание</h1>
+    <p> Задает начальное положение фонового изображения, установленного с помощью
+        свойства <strong>background-image</strong>. В CSS3 допустимо указывать несколько значений для каждого фона,
+        перечисляя значения через запятую.</p>
+    <h3>Значения</h3>
+    <p> У свойства <strong>background-position</strong> два значения, положение по горизонтали (может быть —
+        <strong>left</strong>, <strong>center</strong>, <strong>right</strong>)
+        и вертикали (может быть — <strong>top</strong>, <strong>center</strong>,
+        <strong>bottom</strong>). Кроме использования ключевых слов положение
+        также можно задавать в процентах, пикселах или других единицах. Если применяются
+        ключевые слова, то порядок их следования не имеет значения, при процентной записи
+        вначале задается положение рисунка по горизонтали, а затем, через пробел, положение
+        по вертикали. Отношение между используемыми ключевыми словами и процентной записью
+        следующее.</p>
+    <ul>
+        <li>top left = left top = 0% 0% (в левом верхнем углу)</li>
+        <li>    top = top center = center top = 50% 0% (по центру вверху)</li>
+        <li>    right top = top right = 100% 0% (в правом верхнем углу)</li>
+        <li>    left = left center = center left = 0% 50% (по левому краю и по центру)</li>
+        <li>    center = center center = 50% 50% (по центру)</li>
+        <li>    right = right center = center right = 100% 50% (по правому краю и по центру)</li>
+        <li>    bottom left = left bottom = 0% 100% (в левом нижнем углу)</li>
+        <li>    bottom = bottom center = center bottom = 50% 100% (по центру внизу)</li>
+        <li>    bottom right = right bottom = 100% 100% (в правом нижнем углу)</li>
+    </ul>
+    <p>В скобках указано, где располагается фоновый рисунок относительно контейнера.</p>
+    <p>При <span class="value">inherit</span> значение наследуется у родителя элемента.</p>
+</body>
+</html>

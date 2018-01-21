@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-timing-function</title>
+</head>
+<body>
+    <h1>Описание</h1>
+    <p>Устанавливает, насколько быстро должно изменяться значение стилевого свойство для которого применяется эффект перехода.  </p>
+    <p><strong>transition-timing-function</strong> представляет собой математическую функцию, показывающую, как быстро по времени меняется указанное
+        через transition-property значение свойства. Начальная точка имеет координаты 0.0, 0.0, конечная&nbsp;—  1.0, 1.0, при этом функция по
+        оси ординат может превышать эти значения в большую или меньшую сторону (рис.&nbsp;1). </p>
+    <p><img src="../IMG/css_timing-function-1.png"></p>
+    <p>Рис. 1. Вид функции</p>
+    <h3>Значения</h3>
+        <dt>ease</dt>
+        <dd>Анимация начинается медленно, затем ускоряется и к концу движения опять замедляется. Аналогично <span class="var">cubic-bezier(0.25,0.1,0.25,1)</span>.</dd>
+        <dt>ease-in</dt>
+    <dd>Анимация медленно начинается, к концу ускоряется. Аналогично <strong>cubic-bezier(0.42,0,1,1)</strong>>.</dd>
+        <dt>ease-out</dt>
+        <dd>Анимация начинается быстро, к концу  замедляется. Аналогично <strong>cubic-bezier(0,0,0.58,1)</strong>.</dd>
+        <dt>ease-in-out</dt>
+        <dd>Анимация начинается и заканчивается медленно. Аналогично <strong>cubic-bezier(0.42,0,0.58,1)</strong>.</dd>
+        <dt>linear</dt>
+        <dd>Одинаковая скорость от начала и до конца. </dd>
+        <dt>step-start</dt>
+        <dd>Как таковой анимации нет. Стилевые свойства сразу же принимают конечное значение.</dd>
+        <dt>step-end</dt>
+        <dd>Как таковой анимации нет. Стилевые свойства находятся в начальном значении заданное время, затем сразу же принимаютконечное значение.</dd>
+        <dt>steps</dt>
+        <dd>Ступенчатая функция, имеющая заданное число шагов.
+            <p>transition-timing-function: steps(&lt;число&gt;, start | end)</p>
+        </dd>
+        <dt>&nbsp;</dt>
+        <dd>
+            Здесь: <strong>&lt;число&gt;</strong>
+            — целое число больше нуля; <strong">start</span> — задаёт полунепрерывную снизу функцию; <strong>end</strong> —
+            задаёт полунепрерывную сверху функцию.</dd>
+        <dt>&nbsp;</dt>
+        <dt>cubic-bezier</dt>
+        <dd>Задаёт функцию движения в виде кривой Безье.</dd>
+    <p>
+        <style>
+            .animated_example {
+                border: 1px solid #ccc;
+                font-size: 0.9em;
+                padding: 10px;
+                margin-left: 30px;
+                margin-bottom: 10px;
+            }
+            .animated_example .e {
+                background: #fc0;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 190px;
+                padding: 10px;
+                margin: 5px 0;
+                -moz-transition: width 3s;
+                -o-transition: width 3s;
+                -webkit-transition: width 3s;
+                transition: width 3s;
+            }
+            .animated_example:hover .e {
+                width: 100%;
+            }
+        </style>
+    </p>
+    <section style="margin: 0 0 0 30px">
+        <div style="width: 271px; display:inline-block; vertical-align:top;" class="fig">
+            <img src="../IMG/css_timing-function-ease.png" width="271" height="268" alt="ease">
+            <p class="figsign" style="margin:0">ease</p>
+        </div>
+        <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+            <img src="../IMG/css_timing-function-ease-in.png" width="271" height="268" alt="ease-in">
+            <p class="figsign">ease-in</p>
+        </div>
+        <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+            <img src="../IMG/css_timing-function-ease-out.png" width="271" height="268" alt="ease-out">
+            <p class="figsign">ease-out</p>
+        </div>
+        <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+            <img src="../IMG/css_timing-function-ease-in-out.png" width="271" height="268" alt="ease-in-out">
+            <p class="figsign">ease-in-out</p>
+        </div>
+        <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+            <img src="../IMG/css_timing-function-linear.png" width="271" height="268" alt="linear">
+            <p class="figsign">linear</p>
+        </div>
+        <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+            <img src="../IMG/css_timing-function-step-start.png" width="271" height="268" alt="step-start">
+            <p class="figsign">step-start</p>
+        </div>
+        <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+            <img src="../IMG/css_timing-function-step-end.png" width="271" height="268" alt="step-start">
+            <p class="figsign">step-end</p>
+        </div>
+        <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+            <img src="../IMG/css_timing-function-steps.png" width="271" height="268" alt="steps">
+            <p class="figsign">steps(2, start)</p>
+        </div>
+    </section>
+    <p>Чтобы посмотреть результат действия разных значений, наведите курсор на поле ниже. Время эффект перехода установлено как 3s.</p>
+    <div class="animated_example">
+        <div class="e" style="transition-timing-function: ease">ease</div>
+        <div class="e" style="transition-timing-function: ease-in">ease-in</div>
+        <div class="e" style="transition-timing-function: ease-out">ease-out</div>
+        <div class="e" style="transition-timing-function: ease-in-out">ease-in-out</div>
+        <div class="e" style="transition-timing-function: linear">linear</div>
+        <div class="e" style="transition-timing-function: step-start">step-start</div>
+        <div class="e" style="transition-timing-function: step-end">step-end</div>
+        <div class="e" style="transition-timing-function: steps(5, end)">steps(5, end)</div>
+        <div class="e" style="transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0)">cubic-bezier(0.1, -0.6, 0.2, 0)</div>
+    </div>
+</body>
+</html>

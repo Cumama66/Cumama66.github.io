@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>max-width:</title>
+</head>
+<body>
+<h1>Описание</h1>
+    <p>Устанавливает максимальную ширину элемента. Значение ширины элемента  будет вычисляться в
+        зависимости от значений установленных свойств <strong>width</strong>, <strong>max-width</strong> и <strong>min-width</strong>.
+        В табл.&nbsp;1 показано, чем руководствуется браузер при  совместном использовании указанных стилевых свойств.</p>
+
+    <table>
+        <caption>Табл. 1. Ширина элемента</caption>
+        <tbody><tr>
+            <th colspan="5">Значения свойств </th>
+            <th>Ширина</th>
+        </tr>
+        <tr>
+            <td>min-width</td>
+            <td>&lt;</td>
+            <td>width</td>
+            <td>&lt;</td>
+            <td>max-width</td>
+            <td>width</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>width</td>
+            <td>&lt;</td>
+            <td>max-width</td>
+            <td>width</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>width</td>
+            <td>&gt;</td>
+            <td>max-width</td>
+            <td>max-width</td>
+        </tr>
+        <tr>
+            <td>min-width</td>
+            <td>&gt;</td>
+            <td>width</td>
+            <td>&gt;</td>
+            <td>max-width</td>
+            <td>min-width</td>
+        </tr>
+        <tr>
+            <td>min-width</td>
+            <td>&gt;</td>
+            <td>width</td>
+            <td>&lt;</td>
+            <td>max-width</td>
+            <td>min-width</td>
+        </tr>
+        </tbody></table>
+    <p>Данные из таблицы следует понимать следующим образом. Если значение  ширины (<strong>width</strong>) больше  значения
+        <strong>max-width</strong>, то ширина элемента  принимается равной значению <strong>max-width</strong>.</p>
+    <h3>Значения</h3>
+    <p>В качестве значений принимаются пикселы (px), проценты (%) и другие единицы измерения, принятые в CSS. Отрицательные значения не допускаются.</p>
+        <dt>none</dt>
+        <dd>Отменяет действие этого свойства.</dd>
+        <dt>inherit</dt>
+        <dd>Наследует значение родителя.</dd>
+</body>
+</html>

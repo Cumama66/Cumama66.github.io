@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation-fill-mode:</title>
+</head>
+<body>
+<h1>Описание</h1>
+<p>Определяет, какие стили должны применяться к элементу, когда анимация не проигрывается. Например, после её завершения
+    или при остановке. По умолчанию, в момент окончания анимации стиль элемента возвращается к исходному, свойство
+    <strong>animation-fill-mode</strong> позволяет изменить это поведение и сделать так, чтобы стиль элемента оставался
+    как у последнего ключевого кадра.</p>
+<p>К примеру, если вы делаете выезжающее из-за края окна браузера сообщение, то после окончания анимации сообщение
+    вернётся обратно за край экрана. Значение <strong>forwards</strong> свойства <strong>animation-fill-mode</strong>
+    изменяет это поведение и оставляет стили на момент завершения движения. Таким образом, сообщение плавно выдвинется
+    из-за края окна и останется на месте.</p>
+    <h2>Значения</h2>
+    <dt>none</dt>
+    <dd>
+    К элементу не применяются какие-либо стили.</dd>
+    <dt>forwards</dt>
+    <dd>К элементу по окончанию анимации применяется стиль последнего ключевого кадра. Каким будет этот кадр в
+        последовательности анимации зависит от комбинации значений свойств animation-direction и animation-iteration-count
+        (табл.&nbsp;1).
+        <table><caption>Табл. 1. Последний ключевой кадр</caption>
+            <thead>
+            <tr>
+                <th>animation-direction</th>
+                <th>animation-iteration-count</th>
+                <th>Значение</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>normal</td>
+                <td>любое число</td>
+                <td>100%&nbsp;или&nbsp;to</td>
+            </tr>
+            <tr>
+                <td>reverse</td>
+                <td>любое число</td>
+                <td>0%&nbsp;или&nbsp;from</td>
+            </tr>
+            <tr>
+                <td>alternate</td>
+                <td>чётное число</td>
+                <td>0%&nbsp;или&nbsp;from</td>
+            </tr>
+            <tr>
+                <td>alternate</td>
+                <td>нечётное число</td>
+                <td>100%&nbsp;или&nbsp;to</td>
+            </tr>
+            <tr>
+                <td>alternate-reverse</td>
+                <td>чётное число</td>
+                <td>100%&nbsp;или&nbsp;to</td>
+            </tr>
+            <tr>
+                <td>alternate-reverse</td>
+                <td>нечётное число</td>
+                <td>0%&nbsp;или&nbsp;from</td>
+            </tr>
+            </tbody>
+        </table>
+    </dd>
+<dt>backwards</dt><dd>
+    <p>К элементу применяется стиль первого ключевого кадра и он остаётся на протяжении периода заданного
+        <strong>animation-delay</strong>. Первый ключевой кадр определяется на основании значения
+        <strong>animation-direction</strong> (табл.&nbsp;2).</p>
+    <table>
+        <caption>Табл. 2. Первый ключевой кадр</caption>
+        <thead>
+        <tr>
+            <th>animation-direction</th>
+            <th>Значение</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>normal&nbsp;или&nbsp;alternate</td>
+            <td>0%&nbsp;или&nbsp;from</td>
+        </tr>
+        <tr>
+            <td>reverse&nbsp;или&nbsp;alternate-reverse</td>
+            <td>100%&nbsp;или&nbsp;to</td>
+        </tr>
+        </tbody>
+    </table>
+</dd><dt>both</dt><dd>
+    К элементу применяются оба правила, как для <strong>forwards</strong>, так и для <strong>backwards</strong>.</dd>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Селекторы</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>HTML</th>
+        <th>Возможные селекторы</th>
+        <th>Что это значит</th>
+    </tr>
+    <tr>
+        <td>&lt;p&gt;&lt;/p&gt;</td>
+        <td>p</td><td>Каждый &lt;p&gt;</td>
+    </tr>
+    <tr>
+        <td>&lt;div class="global"&gt;&lt;/div&gt;</td>
+        <td>div<br>
+        .global<br>
+        div.global</td>
+        <td>Каждый&nbsp;&lt;div&gt;<br>
+            Каждый элемент с class=”global”<br>
+            Каждый&nbsp;&lt;div&gt;&nbsp;с&nbsp;class=”global”</td>
+    </tr>
+    <tr>
+        <td>&lt;ul id="menu"&gt;</td>
+        <td>#menu<br> ul#menu</td>
+        <td>Только элемент с id=”menu”<br>
+            Только элемент&nbsp;&lt;ul&gt;&nbsp;с&nbsp;id=”menu”</td>
+    </tr>
+    <tr>
+        <td><pre class="no-result">&lt;ol class="dico"&gt;
+  &lt;li&gt;Un cobaye&lt;/li&gt;
+  &lt;li&gt;Des cobaux&lt;/li&gt;
+&lt;/ol&gt;
+        </pre>
+        </td>
+        <td>li<br>
+            ol li<br> .dico li</td>
+        <td>Каждый&nbsp;&lt;li&gt;<br>
+            Каждый&nbsp;&lt;li&gt;&nbsp;внутри предка &lt;ol&gt;<br>
+            Каждый&nbsp;&lt;li&gt;&nbsp;внутри предка с class="dico"</td>
+    </tr>
+</table>
+</body>
+</html>

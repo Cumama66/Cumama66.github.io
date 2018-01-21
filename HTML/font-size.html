@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font-size:</title>
+</head>
+<body>
+    <h1>Описание</h1>
+    <p> Определяет размер шрифта элемента. Размер может быть установлен несколькими
+        способами. Набор констант (<strong>xx-small</strong>, <strong>x-small</strong>, <strong>small</strong>,
+        <strong>medium</strong>, <strong>large</strong>, <strong>x-large</strong>, <strong>xx-large</strong>) задает размер, который называется абсолютным.
+        По правде говоря, они не совсем абсолютны, поскольку зависят от настроек браузера
+        и операционной системы. </p>
+
+    <p>Другой набор констант (<strong>larger</strong>, <strong>smaller</strong>)
+        устанавливает относительные размеры шрифта. Поскольку размер унаследован от
+        родительского элемента, эти относительные размеры применяются к родительскому
+        элементу, чтобы определить размер шрифта текущего элемента. </p>
+    <p> В конечном итоге, размер шрифта сильно зависит от значения свойства <strong>font-size</strong> у родителя элемента. </p>
+    <p>Сам размер шрифта  определяется как высота от базовой линии до верхней границы кегельной площадки, как показано на рис.&nbsp;1.</p>
+    <p><img src="../IMG/css_font-size_1.png" width="275" height="121"></p>
+    <p>Рис. 1. Размер шрифта</p>
+    <h3>Значения</h3>
+    <p> Для задания абсолютного размера используются следующие значения: <strong>xx-small</strong>,
+        <strong>x-small</strong>, <strong>small</strong>, <strong>medium</strong>,
+        <strong>large</strong>, <strong>x-large</strong>, <strong>xx-large</strong>.
+        Их соответствие с размером шрифта в HTML приведено в табл.&nbsp;1.</p>
+
+    <table style="width:500px;">
+        <caption>
+            Табл. 1. Размер шрифта в CSS и HTML
+        </caption>
+        <tbody><tr>
+            <th>CSS</th>
+            <td>xx-small</td>
+            <td>x-small</td>
+            <td>small</td>
+            <td>medium</td>
+            <td>large</td>
+            <td>x-large</td>
+            <td>xx-large</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th>HTML</th>
+            <td>1</td>
+            <td>&nbsp;</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        </tbody></table>
+    <p>Относительный размер шрифта задается значениями <strong>larger</strong> и <strong>smaller</strong>.</p>
+    <p>Также разрешается использовать любые допустимые единицы CSS: <strong>em</strong>
+        (высота шрифта элемента), <strong>ex</strong> (высота символа х),
+        пункты (<strong>pt</strong>), пикселы (<strong>px</strong>),
+        проценты (<strong>%</strong>) и др. За 100% берется размер шрифта
+        родительского элемента. Отрицательные значения не допускаются.</p>
+        <dt>inherit</dt>
+        <dd>Наследует значение родителя.</dd>
+</body>
+</html>

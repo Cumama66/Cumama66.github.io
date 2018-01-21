@@ -1,0 +1,306 @@
+/* 1 */
+/*#bar {
+    top: -90px; right:1%; /* Положение *!
+    padding: 1%; /* Поля *!
+    margin: 0; /* Отступы *!
+    position: absolute; /* Абсолюттное позиционирование *!
+    width: 3%; /* Ширина *!
+    background: #00f200; /* Цвет фона *!
+    color: #fff731; /* Цвет текста *!
+    text-align: center; /* Выравниванние по центру *!
+    /* Анимация *!
+    transition: top 1s ease-out 0.5s; /* Переход *!
+    transition-duration: 1s; /* Длительность анимации *!
+    overflow: hidden;
+}
+*/
+/*#bar:hover {
+    top: 0; /* При наведении курсора
+}*/
+/*.warn {
+    padding: 1%;
+    transition-duration: 2s; /* Длительность анимации *!
+    border-radius: 30px;
+    text-align: center;
+}
+*/
+/*.warn:hover {
+    background: #fc0;
+}
+.warm {
+    background: #fc0;
+    padding: 1%;
+    top: -50%;
+    position: absolute; /* Абсолютное позиционирование *!
+    left: 0; right: 0;
+}
+*/
+/*.fadeInTop {
+    animation-name: fadeInTop; /* Имя для вызова функции *!
+    animation-duration: 1s; /* Продолжительность анимации *!
+    animation-delay: 0.5s; /* Задержка *!
+    animation-fill-mode: forwards;
+    /* Остановка после конца анимации *!
+}
+/*
+@keyframes fadeInTop {
+    /* Правило @keyframes устанавливает ключевые
+    кадры при анимации элемента.*!
+    from {
+        top: -50%;
+    }
+    to {
+        top: 0;
+    }
+}
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Всплывающий текст при наведении курсора*/
+/*
+.menu {
+    position: absolute;
+    height: 50px; width: 100%;
+    background: #22ff3a;
+    border-bottom: 10px solid #1618ff;
+    top: -50px;
+    /*Анимация*!
+    transition-property: top;
+    /*Устанавливает имя стилевого свойства*!
+    transition-duration: 2s;
+    /*длительность анимации*!
+}
+
+.menu:hover {
+    top: 0;
+}
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*Прогресс бар*/
+/*
+.progress {
+    background: #4add22; !* фон *!
+    border: 2px solid #2435fc; !*рамка*!
+    height: 30px; !*высота*!
+    position: relative; !*относительное позиционирование*!
+}
+.progress:hover::before{
+    width: 100%;
+}
+*/
+
+/*
+.progress::before{
+    transition-timing-function: ease-out !*steps(10,end)*!;
+    !*Скорость изменениястилевого свойства *!
+    transition-timing-function: 5s; !*длительность анимации*!
+    content: '';
+    position: absolute; !* Абсолютное позиционирование*!
+    height: 100%; width: 0;
+    background: #ff2d27; !*фон*!
+}
+*/
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+/* проценты*/
+/*
+body {
+    margin: 0;
+    background: #22beb3;
+}
+.loader-container {
+    position: absolute;
+    top: calc(50% - 65%);
+    left: calc(50% - 65%);
+    width: 100px;
+    height: 100px;
+    background: #BDE2E0;
+    border-radius: 40%;
+    border: 15px solid #d7695a;
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    color: #1312ff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 100px;
+    overflow: hidden;
+}
+@keyframes load {
+    100% {
+        transform: translateY(-110px);
+    }
+}
+.loader {
+    animation: load 11s steps(11, end) infinite;
+}*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*квадраты*/
+/*
+*{box-sizing: border-box}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@keyframes loader {
+    0%{
+        transform:rotate(-45deg)
+    }
+    50%{
+        transform:rotate(-135deg)
+    }
+    100%{
+        transform:rotate(-225deg)
+    }
+}
+@keyframes span-1 {
+    0% {
+        transform:translate(0)
+    }
+    50%{
+        transform:translate(-50px, 0);
+        border-color: #252bee
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+@keyframes span-2 {
+    0%{
+        transform:translate(0);
+    }
+    50%{
+        transform:translate(50px, 0);
+        border-color:#875678
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+@keyframes span-3 {
+    0%{
+        transform:translate(0);
+    }
+    50%{
+        transform:translate(0, -50px);
+        border-color:#ff9900
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+@keyframes span-4 {
+    0%{
+        transform:translate(0);
+    }
+    50%{
+        transform:translate(0, 50px);
+        border-color:#00E4F6
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+.loader {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation: loader 2s infinite ease-in-out;
+}
+.loader span {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 4px solid #ff333a;
+}
+.loader span:nth-child(1) {
+    animation: span-1 2s ease-in-out infinite;
+}
+.loader span:nth-child(2) {
+    animation: span-2 2s ease-in-out infinite;
+}
+.loader span:nth-child(3) {
+    animation: span-3 2s ease-in-out infinite;
+}
+.loader span:nth-child(4) {
+    animation: span-4 2s ease-in-out infinite;
+}
+*/
+/*--------------------------------------------------------------------------*/
+/* трасформация квадрата в круг*/
+/*body {
+    margin: 0;
+    background: #f4ede5;
+}
+div {
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+span {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.4);
+    animation: run 2s infinite ease-in-out;
+}
+
+.one {
+    background: #f3b222;
+    animation-delay: 1.5s;
+}
+.two {
+    background: #f0653e;
+    animation-delay: 1s;
+}
+.three {
+    background: #b9c0c0;
+    animation-delay: 0.5s;
+}
+.four {
+    background: #8f7473;
+}
+
+@keyframes run {
+    0% {
+        transform: translate(0%);
+        border-radius: 50%;
+    }
+    25% {
+        transform: translate(150%) scale(0.5);
+        border-radius: 0%;
+    }
+    50% {
+        transform: translate(150%, 150%);
+        border-radius: 50%;
+    }
+    75% {
+        transform: translate(0%, 150%) scale(0.5);
+        border-radius: 0%;
+    }
+}*/
+/*--------------------------------------------------------------------------*/
+/*часы*/
+/*
+body {
+    margin: 0;
+    background-color: white;
+    background-image:
+            radial-gradient(#ffae38 2px, transparent 3px);
+    background-size: 20px 20px;
+}
+.container {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: calc(50% - 100px);
+}
+*/
